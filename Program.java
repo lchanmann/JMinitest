@@ -7,3 +7,10 @@ public class Program {
         System.out.println("All tests are passed!");
     }
 }
+
+// LinkedList class
+class LinkedList {
+    public int size() {
+        return 0;
+    }
+}
