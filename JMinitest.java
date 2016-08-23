@@ -18,4 +18,8 @@ public abstract class JMinitest {
             }
         }
     }
+    
+    public <T> Verifiable<T> verify(T subject) {
+        return new Verifiable<T>(subject);
+    }
 }

@@ -5,15 +5,15 @@ public class LinkedListTest extends JMinitest {
     }
     
     public void test_initial_linkedlist() {
-        assert list.size() == 0 : "Expected 0 but was " + list.size();
-        assert list.getHead() == null : "Expecte null but was " + list.getHead();
-        assert list.getTail() == null : "Expecte null but was " + list.getTail();
+        verify(list.size()).toEqual(0);
+        verify(list.getHead()).toBeNull();
+        verify(list.getTail()).toBeNull();
     }
     
     public void test_linkedlist_add() {
         list.add(1); list.add(2); list.add(3);
-        assert list.size() == 3 : "Expected 3 but was " + list.size();
-        assert list.getHead().value == 1 : "Expecte 1 but was " + list.getHead().value;
-        assert list.getTail().value == 3 : "Expecte 3 but was " + list.getTail().value;
+        verify(list.size()).toEqual(3);
+        verify(list.getHead().value).toEqual(1);
+        verify(list.getTail().value).toEqual(3);
     }
 }
