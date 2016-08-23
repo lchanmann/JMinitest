@@ -1,26 +1,7 @@
-import java.lang.reflect.*;
-
-public class LinkedListTest {
-    
+public class LinkedListTest extends JMinitest {
     private LinkedList list;
     protected void setup() {
         list = new LinkedList();
-    }
-    
-    public void runTests() throws Throwable {
-        Method[] methods = getClass().getMethods();
-        for(Method method : methods) {
-            if (method.getName().startsWith("test_")) {
-                try {
-                    // call setup for each test methods
-                    setup();
-                    method.invoke(this);
-                } catch (InvocationTargetException e) {
-                    // re-throw exception in method call
-                    throw e.getCause();
-                }
-            }
-        }
     }
     
     public void test_initial_linkedlist() {
