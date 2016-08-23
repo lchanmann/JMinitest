@@ -11,16 +11,19 @@ public class Program {
 }
 
 // LinkedList class
-class LinkedList {    
+class LinkedList {
+    private Object head, tail;
+    private int size;
+
     public Object getHead() {
-        return null;
+        return head;
     }
     
     public Object getTail() {
-        return null;
+        return tail;
     }
     
     public int size() {
-        return 0;
+        return size;
     }
 }
