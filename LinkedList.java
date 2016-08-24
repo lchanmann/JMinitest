@@ -42,4 +42,20 @@ public class LinkedList {
         }
         ++size;
     }
+    
+    public int get(int index) {
+        if (index < 0 || index > size() - 1) {
+            throw new IndexOutOfBoundsException();
+        }
+        
+        Node node = getHead();
+        if (node == null) {
+            throw new IndexOutOfBoundsException();
+        }
+        
+        for (int i = 1; i <= index; i++) {
+            node = node.next;
+        }
+        return node.value;
+    }
 }
