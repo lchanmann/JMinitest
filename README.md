@@ -29,3 +29,8 @@ public class Verifiable<T> {
     }
 }
 ```
+
+## Desirable features
+1. Do not halt the test runner on the first assertion failure and continue to run all the test cases.
+2. Show test runner statistics such as `total_tests`, `passed_tests`, `failed_tests` and test `running_time`.
+3. Run particular test class or test case in a class.
