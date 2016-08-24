@@ -1,7 +1,7 @@
 import java.lang.reflect.*;
 
-public abstract class JMinitest {
-    protected abstract void setup();
+public class JMinitest {
+    protected void setup() {}
     
     public void runTests() throws Throwable {
         Method[] methods = getClass().getMethods();
